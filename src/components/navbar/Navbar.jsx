@@ -1,22 +1,27 @@
-import React, { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
+import { BiSolidMoon, BiSolidSun } from "react-icons/bi";
 import { FiMenu } from "react-icons/fi";
-import { BiSolidSun, BiSolidMoon } from "react-icons/bi";
+import { Link } from "react-router-dom";
 const navMenus = [
   {
     name: "Home",
-    link: "/#home",
+    link: "/",
+  },
+  // {
+  //   name: "About",
+  //   link: "about",
+  // },
+  // {
+  //   name: "Services",
+  //   link: "/#services",
+  // },
+  {
+    name: "Contact Me",
+    link: "contact",
   },
   {
-    name: "About",
-    link: "/#about",
-  },
-  {
-    name: "Services",
-    link: ".#services",
-  },
-  {
-    name: "Contact",
-    link: "#",
+    name: "Photos & medias",
+    link: "medias",
   },
 ];
 
@@ -39,38 +44,38 @@ const Navbar = () => {
       element.classList.remove("dark");
       localStorage.removeItem("theme");
     }
-  }, [theme]);
+  }, [element.classList, theme]);
 
   return (
     <>
       <nav id="home" className="bg-secondary dark:bg-gray-900">
         <div className="container flex justify-between items-center py-3 sm:py-0">
-          <h1 className="text-3xl md:text-5xl font-bold text-primary flex justify-center items-center ">
-            M.
+          <h1 className="text-2xl md:text-4xl font-bold text-primary flex justify-center items-center ">
+            <Link to="/">Emmyjax.</Link>
           </h1>
           <div className="hidden sm:block">
-            <ul className="flex items-center gap-4 dark:text-white">
+            <ul className="flex items-center gap-4 dark:text-white ">
               {navMenus.map((navMenu, index) => {
                 return (
                   <li key={index}>
-                    <a
-                      className="text-xl font-semibold px-2 py-4 md:py-6 inline-block cursor-pointer"
-                      href={navMenu.link}
+                    <Link
+                      className="text-xl font-semibold px-2 py-4 md:py-6 inline-block cursor-pointer hover:text-primary"
+                      to={navMenu.link}
                     >
                       {navMenu.name}
-                    </a>
+                    </Link>
                   </li>
                 );
               })}
               {/* Light and dark mode switcher */}
               {theme === "dark" ? (
                 <BiSolidSun
-                  className="text-2xl dark:text-white"
+                  className="text-2xl dark:text-white cursor-pointer"
                   onClick={() => setTheme("light")}
                 />
               ) : (
                 <BiSolidMoon
-                  className="text-2xl dark:text-white"
+                  className="text-2xl dark:text-white cursor-pointer"
                   onClick={() => setTheme("dark")}
                 />
               )}
@@ -82,12 +87,12 @@ const Navbar = () => {
               {/* Light and dark mode switcher */}
               {theme === "dark" ? (
                 <BiSolidSun
-                  className="text-2xl dark:text-white"
+                  className="text-2xl dark:text-white cursor-pointer"
                   onClick={() => setTheme("light")}
                 />
               ) : (
                 <BiSolidMoon
-                  className="text-2xl dark:text-white"
+                  className="text-2xl dark:text-white cursor-pointer"
                   onClick={() => setTheme("dark")}
                 />
               )}
@@ -102,13 +107,15 @@ const Navbar = () => {
                   {navMenus.map((navMenu, index) => {
                     return (
                       <li key={index}>
-                        <a
-                          className="text-xl font-semibold px-2 py-4 md:py-6 inline-block cursor-pointer"
-                          href={navMenu.link}
-                          onClick={() => setShowMenu(false)}
-                        >
-                          {navMenu.name}
-                        </a>
+                        <Link>
+                          <a
+                            className="text-xl font-semibold px-2 py-4 md:py-6 inline-block cursor-pointer hover:text-primary"
+                            href={navMenu.link}
+                            onClick={() => setShowMenu(false)}
+                          >
+                            {navMenu.name}
+                          </a>
+                        </Link>
                       </li>
                     );
                   })}

@@ -1,29 +1,31 @@
-import React from "react";
-import personImg from "../../assets/person2.png";
+import personImg from "../../assets/JAX.jpeg";
 
 const Hero = () => {
   return (
     <>
       <section className="w-full bg-secondary dark:bg-gray-900 dark:text-white">
-        <div className="container grid grid-cols-1 sm:grid-cols-2 items-center sm:h-[600px] space-y-4 py-12 sm:py-0 ">
+        <div className="container grid grid-cols-1 gap-3 sm:grid-cols-2 items-center sm:h-[600px] space-y-4 py-12 sm:py-0 ">
           <div className="">
             <div className="space-y-2 grid justify-items-center sm:justify-items-start">
-              <p className="uppercase ">Hello</p>
-              <p className="text-4xl md:text-6xl font-bold text-black/80 dark:text-white">
-                I'm Michle Smith
+              <p className="uppercase ">HI</p>
+              <p className="text-2xl md:text-4xl font-bold text-black/80 dark:text-white">
+                I&apos;m a
               </p>
               <p className="text-3xl text-gray-700 dark:text-white">
-                Freelance web & <br /> Full stack Developer
+                Performing Artist & <br /> Content Creator
               </p>
-              <p className="text-black/75 dark:text-white/70 text-center sm:text-left">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Molestiae quod accusamus accusantium voluptas autem doloribus?
+              <p className="text-black/75 dark:text-white/70 text-center  text-wrap sm:text-left">
+                Emmanuel Adetoye is a trailblazing international performing
+                artist, visual artist, and creative artist, dedicated to
+                harnessing the power of art to make a profound impact on the
+                world. Guided by his watchword, &ldquo;Creativity towards
+                positive change&rdquo;.
               </p>
               <a
                 href="mailto:michle@test.com"
                 className="inline-block primary-btn !my-3"
               >
-                Hire me
+                Contact Me
               </a>
             </div>
           </div>
@@ -34,7 +36,7 @@ const Hero = () => {
           <div>
             <img
               src={personImg}
-              className="w-full md:max-w-lg mx-auto backdrop-blur-sm"
+              className="w-full rounded-lg md:max-w-lg mx-auto backdrop-blur-sm"
               alt="person"
             />
           </div>
