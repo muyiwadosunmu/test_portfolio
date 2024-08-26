@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import personImg from "../../assets/JAX.jpeg";
 
 const Hero = () => {
@@ -21,12 +22,13 @@ const Hero = () => {
                 world. Guided by his watchword, &ldquo;Creativity towards
                 positive change&rdquo;.
               </p>
-              <a
+              <Link
+                to="contact"
                 href="mailto:michle@test.com"
                 className="inline-block primary-btn !my-3"
               >
                 Contact Me
-              </a>
+              </Link>
             </div>
           </div>
           {/* image section */}
