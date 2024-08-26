@@ -22,11 +22,7 @@ const Hero = () => {
                 world. Guided by his watchword, &ldquo;Creativity towards
                 positive change&rdquo;.
               </p>
-              <Link
-                to="contact"
-                href="mailto:michle@test.com"
-                className="inline-block primary-btn !my-3"
-              >
+              <Link to="contact" className="inline-block primary-btn !my-3">
                 Contact Me
               </Link>
             </div>
