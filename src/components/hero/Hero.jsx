@@ -1,21 +1,21 @@
 import { Link } from "react-router-dom";
-import personImg from "../../assets/JAX.jpeg";
+import personImg from "../../assets/MAIN.jpg";
 
 const Hero = () => {
   return (
     <>
       <section className="w-full bg-secondary dark:bg-gray-900 dark:text-white">
-        <div className="container grid grid-cols-1 gap-3 sm:grid-cols-2 items-center sm:h-[600px] space-y-4 py-12 sm:py-0 ">
-          <div className="">
+        <div className="container grid grid-cols-1 gap-3 sm:grid-cols-2 items-center sm:h-[600px] space-y-4 py-12 sm:py-0">
+          <div>
             <div className="space-y-2 grid justify-items-center sm:justify-items-start">
-              <p className="uppercase ">HI</p>
+              <p className="uppercase">HI</p>
               <p className="text-2xl md:text-4xl font-bold text-black/80 dark:text-white">
                 I&apos;m a
               </p>
               <p className="text-3xl text-gray-700 dark:text-white">
                 Performing Artist & <br /> Content Creator
               </p>
-              <p className="text-black/75 dark:text-white/70 text-center  text-wrap sm:text-left">
+              <p className="text-black/75 dark:text-white/70 text-center sm:text-left">
                 Emmanuel Adetoye is a trailblazing international performing
                 artist, visual artist, and creative artist, dedicated to
                 harnessing the power of art to make a profound impact on the
@@ -27,15 +27,13 @@ const Hero = () => {
               </Link>
             </div>
           </div>
-          {/* image section */}
-          {/* <div
-            className={`bg-[url("https://source.unsplash.com/random")] bg-no-repeat bg-center bg-cover `}
-          > */}
-          <div>
+          {/* Image section */}
+          <div className="flex justify-center sm:justify-end">
             <img
               src={personImg}
-              className="w-full rounded-lg md:max-w-lg mx-auto backdrop-blur-sm"
-              alt="person"
+              loading="lazy"
+              className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-md h-auto rounded-lg object-cover"
+              alt="Emmanuel Adetoye"
             />
           </div>
         </div>
